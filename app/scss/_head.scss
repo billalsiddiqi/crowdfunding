@@ -1,0 +1,116 @@
+#head {
+    min-height: 300px;
+    background-image: url('../../images/image-hero-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    // padding: 52px 166px;
+
+    @include breakpoint-up(large){
+        background-image: url('../../images/image-hero-desktop.jpg');
+    }   
+    .header {
+        @include breakpoint-down(medium){
+            padding: 32px 23px;
+        }
+
+        @include breakpoint-up(large){
+            padding: 52px 166px;
+        }
+
+        .logo {
+            z-index: 1;
+        }
+
+        .mobile-menu {
+            z-index: 1;
+            > span {
+                display: block;
+                width: 19px;
+                height: 4px;
+                background-color: $white;
+                transform-origin: 0px 2px;
+                transition: 200ms;
+                &:not(:last-child) {
+                    margin-bottom: 3px;
+                }
+            }
+            
+            &.open {
+
+                
+                
+                > span:first-child {
+                    transform: rotate(45deg);
+                }
+                
+                > span:nth-child(2) {
+                    opacity: 0;
+                }
+                
+                > span:last-child {
+                    transform: rotate(-45deg);
+                }
+
+            }
+        }
+    }
+    
+    .navbar {
+        ul li {
+            text-transform: capitalize;
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+        }
+    }
+
+    .overlay-animate {
+        position: fixed;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.6012780112044818) 0%, rgba(255,255,255,0) 94%);
+        animation: fade-in 300ms ease-in-out forwards;
+    }
+
+    .absolute-nav {
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%);
+        background-color: $white;
+        border-radius: 10px;
+
+        .menu-item {
+            padding: 30px 25px;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            &:not(:last-child){
+                border-bottom: 1px solid $light_gray;
+            }
+        }
+
+    }
+
+    .has-fade {
+        visibility: hidden;
+    }
+    .fade-in {
+        animation: fade-in 300ms ease-in-out forwards;
+    }
+
+    .hide-for-mobile {
+        @include breakpoint-down(medium){
+            display: none;
+        }
+    }
+
+    .hide-for-desktop {
+        @include breakpoint-up(large){
+            display: none;
+        }
+    }
+}
