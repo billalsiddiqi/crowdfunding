@@ -1,0 +1,300 @@
+#back {
+    position: relative;
+    text-align: center;
+
+    .content {
+        position: absolute;
+        width: 100%;
+        top: -58px;
+        background-color: $white;
+        border-radius: 10px;
+        padding: 56px 24px 39px 24px;
+        border: 0.5px solid $light_border;
+
+        // padding: 47px
+
+        @include breakpoint-up(large){
+            top: -93px;
+            padding-right: 47px;
+            padding-left: 47px;
+        }
+
+        &-img {
+            img {
+                width: 56px;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: -28px;
+            }
+        }
+
+        &-text {
+            width: 83%;
+            margin: auto;
+
+            h2 {
+                font-weight: 700;
+            }
+            p {
+                color: $paragraph;
+            }
+
+        }
+        &-btns {    
+            margin-top: 30px;
+            @include breakpoint-up(large){
+                justify-content: space-between;
+            }
+           .btn {
+               padding: 22px 45px;
+               border: none;
+               background-color: $moderate_cyan;
+               color: $white;
+               font-size: 1rem;
+               font-weight: 700;
+               border-radius: 70px;
+               cursor: pointer;     
+
+               @include breakpoint-down(small) {
+                   padding: 20px 30px;
+               }
+           }
+
+               .bookmark {
+                   height: 56px;
+                   .book-text {
+                       display: none;
+                   }
+                @include breakpoint-up(medium) {
+
+                    position: relative;
+                    background-color: $light_gray;
+                    margin: auto 0;
+                    padding: 15px 25px 15px 50px;
+                    border-radius: 50px;
+                    color: $moderate_cyan;
+                    font-weight: 700;
+                    
+                    svg {
+                        position: absolute;
+                        left: -20px;
+                        top: -2px;
+                        line-height: 52px;
+                        border-radius: 50%;
+                        border: 2px solid $white;
+                        circle {
+                            fill: $dark_cyan;
+                        }
+                    }
+
+                    .book-text {
+                        display: inline;
+                    }
+                    
+                    &:hover {
+                        color: $dark_gray;  
+                        transition: all 0.3s ease;
+                        
+                        circle {
+                            fill: $dark_gray;
+                            transition: all 0.3s ease;  
+                        }
+                    }
+                }
+               }
+        }
+    }
+
+
+    .back-modal {
+        display: none;
+      
+        .back-container {
+            position: absolute;
+            top: -200px;
+            width: 100%;
+            background-color: $white;
+            border-radius: 10px;
+            padding: 15px 24px;
+            z-index: 3;
+            text-align: left;
+
+            @include breakpoint-up(large){
+                padding: 56px 48px 50px 56px;
+            }
+        }
+
+        &-header {
+            svg {
+                cursor: pointer;
+            }
+           
+        }
+
+        &-items {
+
+            .single-item {
+                position: relative;
+                margin-bottom: 24px;
+
+                .stock {
+                    @include breakpoint-up(large){
+                        position: absolute;
+                        right: 27px;
+                        top: 18px;
+                    }
+                }
+               .single-title {
+                @include breakpoint-up(large){
+                    margin: 3px;
+                }
+               }
+                .line {
+                    position: absolute;
+                    bottom: 9.5rem;
+                    left: 50%;
+                    transform: translate(-50%);
+                    width: 98%;
+                    height: 2px;
+                    background-color: $light_gray;
+                    display: none;
+
+                    @include breakpoint-up(large){
+                        bottom: 7rem;
+                    }
+                }
+
+                .back__button{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    padding: 30px 22px;
+                    border-radius: 10px;
+                    border: 2px solid $light_gray;
+                    background: white;
+                    transition: transform .5s;
+                    cursor: pointer;
+                    &:before{
+                        content: "";
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        margin: 10px;
+                        border: solid 2px $light_gray;
+                        transform: translateY(-30%);
+                    }
+
+                    .item-details {
+                        @include breakpoint-up(large) {
+                            display: flex;
+                        }
+                        h4 {
+                            margin-top: 5px;
+                            margin-bottom: 0;
+                            margin-left: 5px;
+                            @include breakpoint-up(large) {
+                                margin-top: 4px !important;
+                            }
+                            
+                        }
+                        .back-title {
+                            margin-top: -5px;
+                            @include breakpoint-up(large) {
+                                margin-right: 10px;
+                            }
+                        }
+                        
+                        .back-price {
+                            font-size: 14px;
+                            @include breakpoint-up(large) {
+                                font-size: inherit;
+                            }
+                            color: $moderate_cyan;
+                        }
+                    }
+                    .text-strong {
+                        font-weight: 700;
+                        margin-right: 5px;
+                    }
+                    
+                    
+                }
+                
+                input[type="radio"]{
+                    display: none;
+                    &:checked + label:before{
+                        background: $moderate_cyan;
+                        font-size: 50px;
+                    }
+                    &:checked + label{
+                        border: solid 3px $moderate_cyan;
+                        background: white;
+                        transition: transform .5s;
+                        .submit {
+                            display: flex;
+                        }
+                        .line {
+                            display: block;
+                        }
+                        
+                    }
+                }
+
+
+                .submit {
+                    display: none;
+                    margin-top: 40px;
+                    width: 100%;
+                    flex-direction: column;
+                    text-align: center;
+                    @include breakpoint-up(large) {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                    .btns {
+                        width: 100%;
+                        @include breakpoint-up(large){
+                            width: auto;
+                        }
+                        .btn {
+                            padding: 15px 30px;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            border-radius: 70px;
+                            cursor: pointer;     
+                        }
+                        .btn-1 {
+                            background-color: transparent;
+                            border: 1px solid $light_gray;
+                            cursor: not-allowed;
+                        }
+                        .btn-2 {
+                            border: none;
+                            background-color: $moderate_cyan;
+                            color: $white;
+                            @include breakpoint-up(large) {
+                                margin-left: 20px;
+                            }
+                        }
+
+                        .us-dollor {
+                            color: $paragraph;
+                            margin-right: 5px;
+                            font-weight: 400;
+                        }
+
+                        
+                    }
+                 
+                } 
+
+                
+            }
+
+        
+        }
+    }
+}
