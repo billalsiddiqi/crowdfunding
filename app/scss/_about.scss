@@ -1,0 +1,74 @@
+#about {
+
+
+    .about-content {
+        background-color: $white;
+        border: 0.5px solid $light_border;
+        border-radius: 10px;
+        padding: 43px 23px;
+        margin-bottom: 24px;
+
+        @include breakpoint-up(medium) {
+            padding: 52px 47px;
+        }
+    
+        &-text {
+            margin-bottom: 41px;
+        }
+        &-itmes {
+            
+            .single-item {
+                padding: 20px 24px 27px 24px;
+                border: 1px solid $light_gray;
+                border-radius: 10px;
+                margin-bottom: 25px;
+
+                &-header {
+                    @include breakpoint-up(medium) {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    h4 {
+                        margin: 7px 0;
+                    }
+                    h5 {
+                        margin: 0;
+                        color: $moderate_cyan;
+                    }
+                }
+
+
+                &-footer {
+
+                    @include breakpoint-up(medium) {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    .stock {
+                        font-size: 14px;
+
+                        .text-strong {
+                            font-size: 26px;
+                            font-weight: 700;
+                            color: #000;
+                            margin-right: 4px;
+                        }
+
+                    }
+                        .btn {
+                            padding: 15px 30px;
+                            font-size: 0.9rem;
+                            font-weight: 700;
+                            border: none;
+                            border-radius: 70px;
+                            background-color: $moderate_cyan;
+                            color: $white;
+                            cursor: pointer; 
+                        }
+                }
+            }
+        }
+    }
+}
