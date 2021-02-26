@@ -104,7 +104,7 @@ p {
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   opacity: 1;
   top: 0;
   left: 0;
@@ -155,6 +155,10 @@ p {
           animation: fade-modal-in 300ms ease-in-out forwards;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -199,7 +203,7 @@ p {
 
 @media (max-width: 63.9375em) {
   #head .header {
-    padding: 32px 23px;
+    padding: 32px 32px;
   }
 }
 
@@ -312,12 +316,12 @@ p {
 #back {
   position: relative;
   text-align: center;
+  margin-top: -56px;
+  margin-bottom: 24px;
 }
 
 #back .content {
-  position: absolute;
   width: 100%;
-  top: -58px;
   background-color: #fff;
   border-radius: 10px;
   padding: 56px 24px 39px 24px;
@@ -326,7 +330,7 @@ p {
 
 @media (min-width: 64em) {
   #back .content {
-    top: -93px;
+    margin-top: -92px;
     padding-right: 47px;
     padding-left: 47px;
   }
@@ -660,5 +664,84 @@ p {
   color: #9b9b9b;
   margin-right: 5px;
   font-weight: 400;
+}
+
+#statistics {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 40em) {
+  #statistics {
+    text-align: left;
+  }
+}
+
+#statistics .statistics-content {
+  background-color: #fff;
+  border: 0.5px solid #F2F2F2;
+  border-radius: 10px;
+  padding: 38px 24px;
+}
+
+@media (min-width: 40em) {
+  #statistics .statistics-content {
+    padding: 48px;
+  }
+}
+
+@media (min-width: 40em) {
+  #statistics .statistics-content .items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #statistics .statistics-content .items div {
+    padding: 0 48px;
+  }
+  #statistics .statistics-content .items div:not(:last-child) {
+    border-right: 1px solid #ececec;
+  }
+  #statistics .statistics-content .items div:first-child {
+    padding-left: 0;
+  }
+}
+
+#statistics .statistics-content .items h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: -7px;
+}
+
+#statistics .statistics-content .items p {
+  font-size: 14px;
+}
+
+#statistics .statistics-content .items .line {
+  width: 82px;
+  height: 1px;
+  background-color: #ececec;
+  margin: 0 auto;
+}
+
+@media (min-width: 40em) {
+  #statistics .statistics-content .items .line {
+    display: none;
+  }
+}
+
+#statistics .statistics-content .progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #F2F2F2;
+  border-radius: 20px;
+}
+
+#statistics .statistics-content .progress-bar .progress-line {
+  width: 75%;
+  height: 12px;
+  background-color: #3cb4ac;
+  border-radius: 20px;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -10,7 +10,7 @@
     }   
     .header {
         @include breakpoint-down(medium){
-            padding: 32px 23px;
+            padding: 32px 32px;
         }
 
         @include breakpoint-up(large){

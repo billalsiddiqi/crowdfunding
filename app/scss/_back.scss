@@ -1,11 +1,12 @@
 #back {
     position: relative;
     text-align: center;
+    margin-top: -56px;
+    margin-bottom: 24px;
+
 
     .content {
-        position: absolute;
         width: 100%;
-        top: -58px;
         background-color: $white;
         border-radius: 10px;
         padding: 56px 24px 39px 24px;
@@ -14,7 +15,7 @@
         // padding: 47px
 
         @include breakpoint-up(large){
-            top: -93px;
+            margin-top: -92px;
             padding-right: 47px;
             padding-left: 47px;
         }

@@ -1,3 +1,4 @@
+const body = document.getElementsByTagName('body')[0];
 const btnMobile = document.querySelector('#btnMobile');
 const over = document.querySelector('#over');
 const nav = document.querySelector('.absolute-nav');
@@ -17,6 +18,7 @@ btnMobile.addEventListener('click', ()=>{
     over.classList.toggle('fade-out');
     nav.classList.toggle('has-fade');
     nav.classList.toggle('fade-in');
+    body.classList.toggle('overflow-hidden')
 });
 
 

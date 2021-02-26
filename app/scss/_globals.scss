@@ -53,7 +53,7 @@ p {
 
 
 .overlay {
-    position: fixed;
+    position: absolute;
     opacity: 1;
     top: 0;
     left: 0;
@@ -97,6 +97,9 @@ p {
     animation: fade-modal-in 300ms ease-in-out forwards;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
 
 // Flexbox
 
