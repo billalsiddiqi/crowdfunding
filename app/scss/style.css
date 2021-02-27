@@ -127,6 +127,20 @@ p {
           animation: fade-in 300ms ease-in-out forwards;
 }
 
+.overlay-success-modal {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0.601278)), color-stop(94%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.601278) 100%, rgba(255, 255, 255, 0) 94%);
+  -webkit-animation: fade-in 300ms ease-in-out forwards;
+          animation: fade-in 300ms ease-in-out forwards;
+  z-index: 2;
+}
+
 .btn-hover:hover {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -459,7 +473,6 @@ p {
   background-color: #fff;
   border-radius: 10px;
   padding: 15px 24px;
-  z-index: 3;
   text-align: left;
 }
 
@@ -681,6 +694,37 @@ p {
   color: #9b9b9b;
   margin-right: 5px;
   font-weight: 400;
+}
+
+#back .success-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 32px 27px;
+  z-index: 3;
+}
+
+@media (min-width: 64em) {
+  #back .success-modal {
+    width: 70%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+#back .success-modal .btn {
+  padding: 18px 45px;
+  border: none;
+  background-color: #3cb4ac;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 70px;
+  cursor: pointer;
 }
 
 #statistics {
