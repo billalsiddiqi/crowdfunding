@@ -1,5 +1,6 @@
 
 const body = document.getElementsByTagName('body')[0];
+const overlay = document.getElementById('overlay')
 const btnMobile = document.querySelector('#btnMobile');
 const over = document.querySelector('#over');
 const nav = document.querySelector('.absolute-nav');
@@ -29,17 +30,15 @@ btnMobile.addEventListener('click', ()=>{
 //open modal
 openModal.addEventListener('click', ()=>{
     modal.classList.add('open-modal');
-    modal.classList.add('fade-modal-in');
     over.classList.toggle('overlay');
-    over.classList.toggle('overlay-modal');
+    overlay.classList.toggle('overlay-modal');
     
 });
 //close modal
 closeModal.addEventListener('click', ()=>{
     modal.classList.remove('open-modal');
-    modal.classList.remove('fade-modal-in');
     over.classList.toggle('overlay');
-    over.classList.toggle('overlay-modal');
+    overlay.classList.toggle('overlay-modal');
 });
 
 //open success modal

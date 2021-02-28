@@ -42,12 +42,15 @@ p {
 
 .container {
     margin: auto 38px;
-
+    max-width: 1200px;
     @include breakpoint-up(large){
         margin: auto 256px;
     }
     @include breakpoint-up(xlarge){
         margin: auto 436px;
+    }
+    @include breakpoint-up(xxlarge){
+        margin: auto;
     }
 }
 
@@ -72,6 +75,7 @@ p {
     right: 0;
     background: linear-gradient(180deg, rgba(0,0,0,0.6012780112044818) 100%, rgba(255,255,255,0) 94%);
     animation: fade-in 300ms ease-in-out forwards;
+    z-index: 2;
 }
 .overlay-success-modal {
     position: fixed;
@@ -89,9 +93,9 @@ p {
     transition: all 0.3s ease;    
     background-color: $dark_cyan !important;
 }
-// .disabled {
-//     opacity: 0.4 !important;
-// }
+.disabled-section {
+    opacity: 0.4 !important;
+}
 
 .disabled::after {
     content: '';

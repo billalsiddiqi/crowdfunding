@@ -89,6 +89,7 @@ p {
 
 .container {
   margin: auto 38px;
+  max-width: 1200px;
 }
 
 @media (min-width: 64em) {
@@ -100,6 +101,12 @@ p {
 @media (min-width: 87.5em) {
   .container {
     margin: auto 436px;
+  }
+}
+
+@media (min-width: 120rem) {
+  .container {
+    margin: auto;
   }
 }
 
@@ -125,6 +132,7 @@ p {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.601278) 100%, rgba(255, 255, 255, 0) 94%);
   -webkit-animation: fade-in 300ms ease-in-out forwards;
           animation: fade-in 300ms ease-in-out forwards;
+  z-index: 2;
 }
 
 .overlay-success-modal {
@@ -145,6 +153,10 @@ p {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background-color: #147b74 !important;
+}
+
+.disabled-section {
+  opacity: 0.4 !important;
 }
 
 .disabled::after {
@@ -468,12 +480,13 @@ p {
 
 #back .back-modal .back-container {
   position: absolute;
-  top: -100px;
+  top: 0;
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
   padding: 15px 24px;
   text-align: left;
+  z-index: 4 !important;
 }
 
 @media (min-width: 64em) {
@@ -828,6 +841,7 @@ p {
 }
 
 #about .about-content-itmes .single-item {
+  position: relative;
   padding: 20px 24px 27px 24px;
   border: 1px solid #ececec;
   border-radius: 10px;
