@@ -94,13 +94,13 @@ p {
 
 @media (min-width: 64em) {
   .container {
-    margin: auto 256px;
+    margin: auto 160px;
   }
 }
 
 @media (min-width: 87.5em) {
   .container {
-    margin: auto 436px;
+    margin: auto 310px;
   }
 }
 

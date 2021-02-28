@@ -44,10 +44,10 @@ p {
     margin: auto 38px;
     max-width: 1200px;
     @include breakpoint-up(large){
-        margin: auto 256px;
+        margin: auto 160px;
     }
     @include breakpoint-up(xlarge){
-        margin: auto 436px;
+        margin: auto 310px;
     }
     @include breakpoint-up(xxlarge){
         margin: auto;
